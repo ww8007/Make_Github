@@ -170,3 +170,40 @@ float 속성이 들어가면 부모요소가 자식 요소를 올바르게 감�
   float: right;
 }
 ```
+
+### visual section
+
+inner를 포함
+배경은 ineer 밖에 있음
+visual section 전체에 배경이 들어가도록
+
+### position relative
+
+이를 선언하여서 absoulte가 걸리도록 함
+
+### box shadow
+
+박스에 그림자이기 때문에 text-shadow 사용
+
+### ::before
+
+top , left, rifght ,bottm 0을 설정하면 부모 요소로부터 100% 값 받아옴
+
+- position이 absoulte 인 경우 부모 요소에 포지션이 있어야 하지만 포지션을 relative를 하면 된다.
+
+### 배경 이미지 잘리지않도록 설정
+
+background-size:cover로 설정 시 섹션 전체를 다덮어버리게된다.
+
+### flex grow, flex-basis
+
+오른쪽 요소는 크기가 정해져 있고 왼쪽 요소는 크기가 정해져있지 않을 시 이렇게 사용
+flex-grow를 1로 설정하고 flex-basis 0으로 설정한다면 문제는 해결가능하다.
+
+flex : 1; 로 설정시 모든 내용이 됨
+
+### 줄 바꿈
+
+br 테그를 넣을 수도 있긴 하지만
+build software를 엮어주면 된다.
+&nbsp 사용
