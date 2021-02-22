@@ -7,6 +7,10 @@
     color: #333;
 }
 
+a {
+    text-decoration: none;
+}
+
 
 /* 버튼 */
 
@@ -24,6 +28,7 @@
     cursor: pointer;
     box-sizing: border-box;
     position: relative;
+    color: #333;
 }
 
 .btn:hover::before {
@@ -40,4 +45,120 @@
     border: 1px solid #65b836;
     color: #fff;
     background: #55a532 linear-gradient(#91dd70, #55ae2e);
+}
+
+
+/* input */
+
+.input--text {
+    height: 34px;
+    padding: 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+    font-size: 16px;
+}
+
+.input--text:focus {
+    border-color: #51a7e8;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075), 0 0 5px rba(81, 167, 232, 0.5);
+}
+
+
+/* Vendoer Prefix (브라우저 업체별 접두사) */
+
+.input--text::-webkit-input-placeholder {
+    color: #cacaca;
+}
+
+
+/* ms internetexplore */
+
+.input--text::-ms-input-placeholder {
+    color: #cacaca;
+}
+
+
+/* mozila */
+
+.input--text::-moz-input-placeholder {
+    color: #cacaca;
+}
+
+
+/* FLOAT CLEARFIX  */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+
+.float--left {
+    float: left;
+}
+
+.float--right {
+    float: right;
+}
+
+
+/* HEADER */
+
+header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.75);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+    background: #fff;
+}
+
+
+/* 헤더의 ineer로 들어가는 이유는 헤더에도 넣고 inner에도 넣어야 하기 때문에 자식 요소의 높이에 따라서 알아서 들어감 */
+
+header .inner {
+    max-width: 980px;
+    height: 78px;
+    margin: 0 auto;
+}
+
+header .menu-group {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+header .logo {
+    margin-right: 10px;
+}
+
+header .logo a {
+    background: url("../img/logo.svg");
+    width: 32px;
+    height: 32px;
+    display: block;
+    text-indent: -9999px;
+}
+
+header .logo a:hover {
+    background: url("../img/logo_on.svg");
+}
+
+header .main-menu {
+    display: flex;
+}
+
+header .main-menu li a {
+    display: block;
+    padding: 10px;
+    color: #3c4146;
+}
+
+header .main-menu li a:hover {
+    color: #4078c0;
+}
+
+header .sign-group {
+    display: flex;
+    /* float: right; */
 }
