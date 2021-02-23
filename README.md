@@ -21,8 +21,8 @@ user-scalable=no 사용자가 화면을 확대 축소를 막아놓음
 ```html
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link
-  href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
-  rel="stylesheet"
+   href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+   rel="stylesheet"
 />
 <link rel="stylesheet" href="css/main.css" />
 ```
@@ -31,14 +31,14 @@ user-scalable=no 사용자가 화면을 확대 축소를 막아놓음
 
 초기화를 먼저 해주고 다른 것을 해주는 것이 중요함
 
-- link 태그를 이용한 바로 링크로 받아오기도 가능
+-  link 태그를 이용한 바로 링크로 받아오기도 가능
 
 ```html
 <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
-  integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
-  crossorigin="anonymous"
+   rel="stylesheet"
+   href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+   integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+   crossorigin="anonymous"
 />
 ```
 
@@ -46,12 +46,12 @@ user-scalable=no 사용자가 화면을 확대 축소를 막아놓음
 
 body 태그를 직접적으로 모두 건드는 것 보다 react에서 사용 하듯이 컨테이너 생성해서 스타일 적용하는 것이 좋음
 
-- BEM 작명 규칙
-  block element css 작명 규칙
+-  BEM 작명 규칙
+   block element css 작명 규칙
 
-  - \_
+   -  \_
 
-  - (\_\_) 무엇의 일부분
+   -  (\_\_) 무엇의 일부분
 
 버튼의 상태를 나타낼 때는 -- 하이픈 두 번 사용
 \_\_ 두번 사용하는 것도 똑같은 느낌
@@ -60,8 +60,8 @@ toggle-btn -> 하나로 이루어 진다면 일반적인 작명 규칙느낌
 
 ### 반복적인 부분은 input 버튼 하나로 동일하게 적용
 
-- 버튼 그라데이션
-  linear-gradient(to bottom, red, blue);
+-  버튼 그라데이션
+   linear-gradient(to bottom, red, blue);
 
 ### align-items
 
@@ -104,7 +104,7 @@ ul 태그들을 사용해서 li로 사용
 화면 가운데에 정렬 하려면 margin 값을 0 auto로 설정 할 시 위 아래는 0 auto로 하면
 알아서 가운데 정렬이 된다.
 
-- 주의 사항 : 특정 요소의 사이즈 값이 정해져 있어야 한다.
+-  주의 사항 : 특정 요소의 사이즈 값이 정해져 있어야 한다.
 
 display: flex로 설정 되어있다면 align-items: center를 사용 가능 하고
 이를 할 때는 부모 요소의 높이 값을 같이 따라가도록 height: 100%로 설정하여야 한다.
@@ -114,16 +114,16 @@ display: flex로 설정 되어있다면 align-items: center를 사용 가능 하
 li 태그들의 크기가 너무 작기 때문에 a
 margin으로 확보하는 것이 아닌 padding으로 확보해야 한다.
 
-- 여기서 클릭 되는것은 li가 아닌 a 태그 이므로 a태그에 삽입 되도록 해야한다.
+-  여기서 클릭 되는것은 li가 아닌 a 태그 이므로 a태그에 삽입 되도록 해야한다.
 
-* a 태그는 inline 요소 이므로 display: block으로 설정
-  범위를 가질 수 없으므로
+*  a 태그는 inline 요소 이므로 display: block으로 설정
+   범위를 가질 수 없으므로
 
-* img 태그에서는 alt가 필수 요소로 대체 텍스트 속성으로 사용이 된다.
-  css에 backgroun로 사용하면 대체 텍스트 속성은 사용 할 수 없다.
+*  img 태그에서는 alt가 필수 요소로 대체 텍스트 속성으로 사용이 된다.
+   css에 backgroun로 사용하면 대체 텍스트 속성은 사용 할 수 없다.
 
-* text-indent 속성을 사용해서 대체 택스트 느낌으로 사용할 수 있다.
-  -9999px 의 이유는 텍스트를 사라지게 하는 용도로 사용했구나를 명시한다.
+*  text-indent 속성을 사용해서 대체 택스트 느낌으로 사용할 수 있다.
+   -9999px 의 이유는 텍스트를 사라지게 하는 용도로 사용했구나를 명시한다.
 
 ### 반응형 웹페이지
 
@@ -145,29 +145,29 @@ float 속성이 들어가면 부모요소가 자식 요소를 올바르게 감�
 
 ```css
 .clearfix::after {
-  content: "";
-  clear: both;
-  display: block;
+   content: "";
+   clear: both;
+   display: block;
 }
 ```
 
-- 매번 flaot left right 속성을 사용하는 것 보다 이를 common적인 요소로 사용하는 것이 더 효율 적
+-  매번 flaot left right 속성을 사용하는 것 보다 이를 common적인 요소로 사용하는 것이 더 효율 적
 
 ```css
 /* FLOAT CLEARFIX  */
 
 .clearfix::after {
-  content: "";
-  clear: both;
-  display: block;
+   content: "";
+   clear: both;
+   display: block;
 }
 
 .float--left {
-  float: left;
+   float: left;
 }
 
 .float--right {
-  float: right;
+   float: right;
 }
 ```
 
@@ -189,7 +189,7 @@ visual section 전체에 배경이 들어가도록
 
 top , left, rifght ,bottm 0을 설정하면 부모 요소로부터 100% 값 받아옴
 
-- position이 absoulte 인 경우 부모 요소에 포지션이 있어야 하지만 포지션을 relative를 하면 된다.
+-  position이 absoulte 인 경우 부모 요소에 포지션이 있어야 하지만 포지션을 relative를 하면 된다.
 
 ### 배경 이미지 잘리지않도록 설정
 
@@ -212,4 +212,26 @@ build software를 엮어주면 된다.
 
 유튜브에서 소스코드를 복사하여 오면 잘 작동은 하지만 반응형으로 만들어주기 위해서는 추가적인 작업이 필요하다.
 
-- video-ratio를 만들어줘서 사용
+-  video-ratio를 만들어줘서 사용
+
+### grid float
+
+modern 한 방식은 grid
+desktop : 4개의 grid
+
+repeat의 숫자만 바꿔주면 반응형을 구현 가능하다.
+
+grid의 경우 최신 기술 이기 때문에 브라우저에서 지원 안하는 경우가 생길 수 있다.
+
+이 경우 에서는 float:left와 width를 사용하여서 해결이 가능하다.
+
+%를 사용할 경우 사이즈에 대한 명시를 다르게 해줘야 한다.
+
+-  box-sizing: border-box
+
+grid를 사용하는 것이 더 좋음
+
+### 지도 api 사용하기
+
+지도를 공유하여 오는 것은 아님
+지도 api를 받아와서 사용
