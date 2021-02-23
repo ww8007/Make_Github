@@ -240,3 +240,87 @@ grid를 사용하는 것이 더 좋음
 
 top, bottom left right를 0으로 설정하고 margin을 0로 설정
 그리고 width, height의 크기를 설정해주면 부모요소로부터 가운데 지점에 배치가 되도록 할 수 있다.
+
+### media query
+
+### @media
+
+다양한 미디어 유형이나 장치에 따라 서로 다른 스타일 규칙을 적용
+@media 미디어타입 and (미디어 특성) {
+css코드
+}
+
+```css
+@media screen and (max-width: 1200px) {
+   body {
+      color: red;
+   }
+}
+```
+
+미디어 타입
+
+all : 모든 미디어 타입에 적용
+screen : 컴퓨터 화면, 타블렛, 스마트폰
+print : 인쇄 전용
+
+max-wdith : 최대 너비(이하)
+
+orientation 뷰포트 방향 : landscape
+
+### 반응형 웹페이지
+
+bootstrab 추후에 공부 필요
+
+```css
+@media (max-width: 1024px) {
+}
+```
+
+header. inner로 들어가면 명시도 점수가 낮아서 적용이 안되게 된다.
+
+header.section .inner {
+}
+이렇게 들어가서 명시도 21점으로 올림
+
+header의 높이를 고정 시키면 안됨
+-> 토글 버튼을 누를 시 늘어나야 하기 때문에
+
+```css
+@media (max-width: 1024px) {
+   header.section .inner {
+      max-width: none;
+      height: auto;
+   }
+}
+```
+
+-  수직으로 쌓여야 하기 때문에 float의 개념도 초기화 시켜줘야 함
+   ```css
+   header .menu-group,
+   header .sign-group {
+      float: none;
+   }
+   ```
+
+### order
+
+order의 경우 display가 flex 인 경우만 적용되기 때문에 이는 block이면 무의미
+
+### toggle menu-group, signgroup
+
+### onClick 만들어주기
+
+전체 영역을 더럽히지 않도록 구분함
+모듈 화
+구분지어 줌
+
+1. querySelectorAll로 .toggle class 받아옴
+1. getElementById로 toggle-btn id 찾아옴
+
+main.js를 추가 시켜줘도 제대로 동작하지 않음
+서순이 잘못되었기 때문
+
+-  defer를 추가 시켜서 맨 마지막에 실행 시키도록 할 수 있다.
+
+브라우저가 변경되면 지금 상태는 toggle이 on 된 상태로 연결되어서 시작되게 된다.
