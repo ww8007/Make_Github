@@ -1,5 +1,9 @@
 # Make_Github
 
+## Site Link
+
+(link)[https://ww8007.github.io/Make_Github/]
+
 ### viewport
 
 initial-scale 최초 화면 비율
@@ -21,8 +25,8 @@ user-scalable=no 사용자가 화면을 확대 축소를 막아놓음
 ```html
 <link rel="preconnect" href="https://fonts.gstatic.com" />
 <link
-   href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
-   rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap"
+  rel="stylesheet"
 />
 <link rel="stylesheet" href="css/main.css" />
 ```
@@ -31,14 +35,14 @@ user-scalable=no 사용자가 화면을 확대 축소를 막아놓음
 
 초기화를 먼저 해주고 다른 것을 해주는 것이 중요함
 
--  link 태그를 이용한 바로 링크로 받아오기도 가능
+- link 태그를 이용한 바로 링크로 받아오기도 가능
 
 ```html
 <link
-   rel="stylesheet"
-   href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
-   integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
-   crossorigin="anonymous"
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+  integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
+  crossorigin="anonymous"
 />
 ```
 
@@ -46,12 +50,12 @@ user-scalable=no 사용자가 화면을 확대 축소를 막아놓음
 
 body 태그를 직접적으로 모두 건드는 것 보다 react에서 사용 하듯이 컨테이너 생성해서 스타일 적용하는 것이 좋음
 
--  BEM 작명 규칙
-   block element css 작명 규칙
+- BEM 작명 규칙
+  block element css 작명 규칙
 
-   -  \_
+  - \_
 
-   -  (\_\_) 무엇의 일부분
+  - (\_\_) 무엇의 일부분
 
 버튼의 상태를 나타낼 때는 -- 하이픈 두 번 사용
 \_\_ 두번 사용하는 것도 똑같은 느낌
@@ -60,8 +64,8 @@ toggle-btn -> 하나로 이루어 진다면 일반적인 작명 규칙느낌
 
 ### 반복적인 부분은 input 버튼 하나로 동일하게 적용
 
--  버튼 그라데이션
-   linear-gradient(to bottom, red, blue);
+- 버튼 그라데이션
+  linear-gradient(to bottom, red, blue);
 
 ### align-items
 
@@ -104,7 +108,7 @@ ul 태그들을 사용해서 li로 사용
 화면 가운데에 정렬 하려면 margin 값을 0 auto로 설정 할 시 위 아래는 0 auto로 하면
 알아서 가운데 정렬이 된다.
 
--  주의 사항 : 특정 요소의 사이즈 값이 정해져 있어야 한다.
+- 주의 사항 : 특정 요소의 사이즈 값이 정해져 있어야 한다.
 
 display: flex로 설정 되어있다면 align-items: center를 사용 가능 하고
 이를 할 때는 부모 요소의 높이 값을 같이 따라가도록 height: 100%로 설정하여야 한다.
@@ -114,16 +118,16 @@ display: flex로 설정 되어있다면 align-items: center를 사용 가능 하
 li 태그들의 크기가 너무 작기 때문에 a
 margin으로 확보하는 것이 아닌 padding으로 확보해야 한다.
 
--  여기서 클릭 되는것은 li가 아닌 a 태그 이므로 a태그에 삽입 되도록 해야한다.
+- 여기서 클릭 되는것은 li가 아닌 a 태그 이므로 a태그에 삽입 되도록 해야한다.
 
-*  a 태그는 inline 요소 이므로 display: block으로 설정
-   범위를 가질 수 없으므로
+* a 태그는 inline 요소 이므로 display: block으로 설정
+  범위를 가질 수 없으므로
 
-*  img 태그에서는 alt가 필수 요소로 대체 텍스트 속성으로 사용이 된다.
-   css에 backgroun로 사용하면 대체 텍스트 속성은 사용 할 수 없다.
+* img 태그에서는 alt가 필수 요소로 대체 텍스트 속성으로 사용이 된다.
+  css에 backgroun로 사용하면 대체 텍스트 속성은 사용 할 수 없다.
 
-*  text-indent 속성을 사용해서 대체 택스트 느낌으로 사용할 수 있다.
-   -9999px 의 이유는 텍스트를 사라지게 하는 용도로 사용했구나를 명시한다.
+* text-indent 속성을 사용해서 대체 택스트 느낌으로 사용할 수 있다.
+  -9999px 의 이유는 텍스트를 사라지게 하는 용도로 사용했구나를 명시한다.
 
 ### 반응형 웹페이지
 
@@ -145,29 +149,29 @@ float 속성이 들어가면 부모요소가 자식 요소를 올바르게 감�
 
 ```css
 .clearfix::after {
-   content: "";
-   clear: both;
-   display: block;
+  content: "";
+  clear: both;
+  display: block;
 }
 ```
 
--  매번 flaot left right 속성을 사용하는 것 보다 이를 common적인 요소로 사용하는 것이 더 효율 적
+- 매번 flaot left right 속성을 사용하는 것 보다 이를 common적인 요소로 사용하는 것이 더 효율 적
 
 ```css
 /* FLOAT CLEARFIX  */
 
 .clearfix::after {
-   content: "";
-   clear: both;
-   display: block;
+  content: "";
+  clear: both;
+  display: block;
 }
 
 .float--left {
-   float: left;
+  float: left;
 }
 
 .float--right {
-   float: right;
+  float: right;
 }
 ```
 
@@ -189,7 +193,7 @@ visual section 전체에 배경이 들어가도록
 
 top , left, rifght ,bottm 0을 설정하면 부모 요소로부터 100% 값 받아옴
 
--  position이 absoulte 인 경우 부모 요소에 포지션이 있어야 하지만 포지션을 relative를 하면 된다.
+- position이 absoulte 인 경우 부모 요소에 포지션이 있어야 하지만 포지션을 relative를 하면 된다.
 
 ### 배경 이미지 잘리지않도록 설정
 
@@ -212,7 +216,7 @@ build software를 엮어주면 된다.
 
 유튜브에서 소스코드를 복사하여 오면 잘 작동은 하지만 반응형으로 만들어주기 위해서는 추가적인 작업이 필요하다.
 
--  video-ratio를 만들어줘서 사용
+- video-ratio를 만들어줘서 사용
 
 ### grid float
 
@@ -227,7 +231,7 @@ grid의 경우 최신 기술 이기 때문에 브라우저에서 지원 안하�
 
 %를 사용할 경우 사이즈에 대한 명시를 다르게 해줘야 한다.
 
--  box-sizing: border-box
+- box-sizing: border-box
 
 grid를 사용하는 것이 더 좋음
 
@@ -252,9 +256,9 @@ css코드
 
 ```css
 @media screen and (max-width: 1200px) {
-   body {
-      color: red;
-   }
+  body {
+    color: red;
+  }
 }
 ```
 
@@ -288,20 +292,20 @@ header의 높이를 고정 시키면 안됨
 
 ```css
 @media (max-width: 1024px) {
-   header.section .inner {
-      max-width: none;
-      height: auto;
-   }
+  header.section .inner {
+    max-width: none;
+    height: auto;
+  }
 }
 ```
 
--  수직으로 쌓여야 하기 때문에 float의 개념도 초기화 시켜줘야 함
-   ```css
-   header .menu-group,
-   header .sign-group {
-      float: none;
-   }
-   ```
+- 수직으로 쌓여야 하기 때문에 float의 개념도 초기화 시켜줘야 함
+  ```css
+  header .menu-group,
+  header .sign-group {
+    float: none;
+  }
+  ```
 
 ### order
 
@@ -321,6 +325,27 @@ order의 경우 display가 flex 인 경우만 적용되기 때문에 이는 bloc
 main.js를 추가 시켜줘도 제대로 동작하지 않음
 서순이 잘못되었기 때문
 
--  defer를 추가 시켜서 맨 마지막에 실행 시키도록 할 수 있다.
+- defer를 추가 시켜서 맨 마지막에 실행 시키도록 할 수 있다.
 
 브라우저가 변경되면 지금 상태는 toggle이 on 된 상태로 연결되어서 시작되게 된다.
+
+### 같은 내용에 대해서 작업 하는 법
+
+main.css에서 아닌 파일로 관리 하도록 추출
+main_medium, main_small 같이 생성 하여서 따로 link로 stylesheet 적용 시킨다.
+이로써 수정 가능
+
+### 점수 무시하고 제일 먼저 적용
+
+!important를 추가하면 우선순위 점수가 무시되며 가장 먼저 적용된다.
+
+### width : auto
+
+auto와 100%의 차이점은 inner의 가로 사이즈에 영향을 받는 100%에 받기 때문에 auto로 설정하여서 -20px씩 해주면 기존 크기에서 40px 늘어난 크기를 사용하게된다.
+
+- %는 부모 요소의 영향을 받음
+
+### display : flex
+
+이의 문제점은 문자를 제대로 가운데에 출력할 수 없다는 점 이다. 이를 해결하기 위해서
+display를 block으로 설정하고 이를 해결 할 수 있다.
